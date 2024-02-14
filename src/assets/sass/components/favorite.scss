@@ -1,0 +1,185 @@
+@use '../foundation/variables' as variable;
+@use '../foundation/mixin' as mixin;
+
+.favorite {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    p {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-left: 0.5rem;
+      @include mixin.sp {
+        font-size: 1.4rem;
+      }
+    }
+    strong {
+      color: variable.$base_color;
+      font-size: 1.4rem;
+      margin-left: 1rem;
+      @include mixin.sp {
+        font-size: 1.2rem;
+      }
+    }
+    &-left {
+      display: flex;
+      align-items: center;
+    }
+    &-edit {
+      width: 12rem;
+      line-height: 2.2rem;
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-top: 0;
+      @include mixin.sp {
+        padding: 0 1rem;
+        font-size: 1rem;
+      }
+    }
+    &-buttons {
+      display: flex;
+      gap: 0.5rem;
+      button {
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+    &-button {
+      width: 80px;
+      height: 20px;
+      font-size: 1rem;
+      margin-top: 0;
+      margin-left: 2rem;
+      &--reset {
+        width: 80px;
+        height: 20px;
+        font-size: 1rem;
+        margin-top: 0;
+      }
+    }
+    &-caution {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 1.5rem;
+      @include mixin.sp {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      a {
+        font-size: 1.4rem;
+        color: variable.$text_color_primary;
+      }
+      img {
+        width: 14px;
+      }
+      p {
+        font-size: 1rem;
+        color: variable.$header_sub_color;
+        font-weight: 400;
+      }
+    }
+  }
+  &__middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    @include mixin.sp {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      margin-top: 1rem;
+      gap: 1rem;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    margin-top: 2.7rem;
+    @include mixin.sp {
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+    &-flex {
+      display: flex;
+      margin-left: 1rem;
+      &:first-child {
+        margin-left: 0;
+      }
+      @include mixin.sp {
+        margin-left: 0;
+      }
+    }
+    &-button {
+      display: flex;
+      font-size: 1.2rem;
+      letter-spacing: 0.1em;
+      border-bottom: solid 1px variable.$base_color;
+      padding: 0.5em;
+      margin-left: 1rem;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    &-requirement {
+      color: variable.$header_sub_color;
+    }
+    &-value {
+      margin-left: 1rem;
+    }
+  }
+  &__select {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 6rem;
+    position: relative;
+    @include mixin.sp {
+      margin-top: 2rem;
+      gap: 1rem;
+    }
+    &-button {
+      width: 24rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin: 0;
+      @include mixin.sp {
+        width: 14rem;
+        height: 2.4rem;
+        font-size: 1.2rem;
+        img {
+          width: 1rem;
+          right: 0.51rem;
+        }
+      }
+      &--all {
+        position: absolute;
+        left: 0;
+        margin-top: 0;
+        font-size: 1.4rem;
+        font-weight: 500;
+        height: 3rem;
+        width: 11rem;
+        @include mixin.sp {
+          position: relative;
+          width: 8rem;
+          height: 2.4rem;
+          font-size: 1.2rem;
+        }
+      }
+      &--delete {
+        background-color: variable.$text_prohibited_color;
+        color: variable.$white;
+        border: solid 1px variable.$text_prohibited_color;
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@use '../foundation/variables' as variable;
+@use '../foundation/mixin' as mixin;
+
+input[type='checkbox'],
+input[type='radio'] {
+  display: none;
+}
+.checkbox {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  padding: 6px 0;
+  padding-left: 24px;
+  position: relative;
+  width: auto;
+  font-size: 1.2rem;
+  &::before {
+    background-color: variable.$text_prohibited_color;
+    border: solid 1px variable.$text_prohibited_color;
+    content: '';
+    display: block;
+    height: 12px;
+    left: 5px;
+    margin-top: -6px;
+    position: absolute;
+    top: 50%;
+    width: 12px;
+  }
+  &::after {
+    border-right: 2px solid variable.$white;
+    border-bottom: 2px solid variable.$white;
+    content: '';
+    display: block;
+    left: 9px;
+    margin-top: -5px;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg);
+    width: 4px;
+    height: 8px;
+  }
+}
+input[type='checkbox']:checked + .checkbox::before {
+  background-color: variable.$base_color;
+  border: solid 1px variable.$base_color;
+}
+
+.radio {
+  font-size: 1.4rem;
+  @include mixin.sp {
+    font-size: 1.2rem;
+  }
+  &__button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px 0;
+    padding-left: 24px;
+    position: relative;
+    width: auto;
+    &::before {
+      background-color: variable.$white;
+      border: solid 1px variable.$text_prohibited_color;
+      border-radius: 50%;
+      content: '';
+      display: block;
+      height: 14px;
+      left: 5px;
+      margin-top: -7px;
+      position: absolute;
+      top: 50%;
+      width: 14px;
+    }
+    &::after {
+      background-color: variable.$white;
+      border-radius: 50%;
+      content: '';
+      display: block;
+      height: 10px;
+      left: 7px;
+      margin-top: -5px;
+      position: absolute;
+      top: 50%;
+      width: 10px;
+    }
+    input[type='radio']:checked + &::after {
+      background-color: variable.$base_color;
+    }
+  }
+}

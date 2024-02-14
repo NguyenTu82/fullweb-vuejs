@@ -1,0 +1,112 @@
+@use '../foundation/variables' as variable;
+@use '../foundation/mixin' as mixin;
+.topinfo {
+  background-color: variable.$white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  &__container {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    @include mixin.sp {
+      display: block;
+      height: auto;
+      padding: 2rem 0;
+    }
+  }
+  &__breadcrumb {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    @include mixin.sp {
+      width: 100%;
+      align-items: stretch;
+    }
+    &-head {
+      width: 20px;
+      height: 20px;
+      background-color: variable.$base_color;
+      @include mixin.sp {
+        width: 10px;
+        height: 10px;
+      }
+    }
+    &-img {
+      margin-left: 1rem;
+      @include mixin.sp {
+        margin-left: 0.8rem;
+      }
+    }
+    a {
+      font-size: 1.2rem;
+      margin-left: 1rem;
+      @include mixin.sp {
+        font-size: 1rem;
+        margin-left: 0.8rem;
+      }
+    }
+  }
+  &__news {
+    width: 50%;
+    display: flex;
+    border-bottom: solid 1px variable.$text_prohibited_color;
+    padding-bottom: 0.6rem;
+    @include mixin.sp {
+      width: 100%;
+      margin-top: 0.6rem;
+    }
+    &-left {
+      a {
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+        letter-spacing: 0.1em;
+        white-space: nowrap;
+        @include mixin.sp {
+          font-size: 1rem;
+        }
+      }
+      img {
+        width: 11px;
+        margin-right: 0.5rem;
+      }
+      &-time {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.2rem;
+        p {
+          font-size: 1rem;
+          @include mixin.sp {
+            transform: scale(0.8);
+          }
+        }
+      }
+    }
+    &-right {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-left: 3rem;
+      width: 100%;
+      @include mixin.sp {
+        margin-left: 1rem;
+      }
+      p {
+        font-size: 1.4rem;
+        letter-spacing: 0.1em;
+        @include mixin.sp {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  .important_notice {
+    width: 45px;
+    margin-left: 26px;
+  }
+  .limit-text-w300 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+  }
+}

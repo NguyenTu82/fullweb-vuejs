@@ -1,0 +1,33 @@
+@use "../foundation/variables" as variable;
+
+.switch {
+  position: relative;
+  cursor: pointer;
+  &__base {
+    width: 2rem;
+    border-radius: 16px;
+    height: 0.7rem;
+    background-color: variable.$smoke_color_lv2;
+  }
+  &__circle {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: -0.2rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 12px;
+    background-color: variable.$text_prohibited_color;
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.1);
+    transition-duration: 0.3s;
+  }
+}
+
+input:checked + .switch__base {
+  background-color: variable.$base_color_bg;
+}
+
+input:checked ~ .switch__circle {
+  left: 1.2rem;
+  background-color: variable.$base_color;
+}

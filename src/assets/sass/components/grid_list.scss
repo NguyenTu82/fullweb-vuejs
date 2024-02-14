@@ -1,0 +1,26 @@
+@use '../foundation/mixin' as mixin;
+
+.grid_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  margin-top: 3rem;
+  @include mixin.tab {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mixin.sp {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+  &--four_columns {
+    grid-template-columns: repeat(4, 1fr);
+    @include mixin.sp {
+      grid-template-columns: 1fr;
+    }
+  }
+  &--sp_two_columns {
+    @include mixin.sp {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

@@ -1,0 +1,10 @@
+gitignore
+.idea
+/node_modules
+/node_modules/*
+/package-lock.json
+#ignore env file
+.env
+
+#ignore editor settings
+.vscode

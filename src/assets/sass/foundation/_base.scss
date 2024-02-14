@@ -1,0 +1,96 @@
+@use './variables' as variable;
+@use './mixin' as mixin;
+html {
+  font-size: 11px;
+  scroll-behavior: smooth;
+  @include mixin.sp {
+    font-size: 10px;
+  }
+}
+
+body {
+  font-weight: 400;
+  line-height: 1;
+  font-family: variable.$font;
+  letter-spacing: 0.02em;
+  color: variable.$text_color;
+}
+
+main {
+  background-color: variable.$base_color_bg;
+  padding-top: variable.$header_height;
+  @include mixin.sp {
+    padding-top: variable.$sp_header_height;
+  }
+}
+
+.title {
+  background-color: variable.$button_color_tertiary;
+  font-size: 2rem;
+  letter-spacing: 0.18em;
+  padding: 0 2.5rem;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  @include mixin.sp {
+    font-size: 1.4rem;
+    height: 46px;
+    line-height: 46px;
+    padding: 0 1.6rem;
+  }
+  small {
+    font-family: variable.$font_en;
+    font-size: 1.4rem;
+    letter-spacing: 0.06em;
+    margin-left: 1em;
+    color: variable.$text_color_primary;
+    @include mixin.sp {
+      font-size: 1rem;
+    }
+  }
+}
+
+.container {
+  padding: 4rem 0;
+  @include mixin.sp {
+    padding: 2rem 0;
+  }
+  &--notop {
+    padding-top: 1rem;
+    @include mixin.sp {
+      padding-top: 0.1px;
+    }
+  }
+}
+
+.grid_buttons {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  a {
+    @include mixin.sp {
+      gap: 1rem;
+      font-size: 1rem;
+    }
+  }
+  @include mixin.sp {
+    margin-bottom: 1rem;
+    gap: 1rem;
+  }
+}
+
+.no_header_padding {
+  padding-top: 0;
+}
+
+.hidden {
+  opacity: 0 !important;
+  height: 0 !important;
+  z-index: variable.$layer_minus !important;
+}
+
+a {
+  text-decoration: none;
+  color: variable.$text_color;
+}

@@ -1,0 +1,6 @@
+<svg id="step-number_done" data-name="step-number / done" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="step-number_current" data-name="step-number / current">
+    <circle id="Oval" cx="15" cy="15" r="15" fill="#43deb1"/>
+    <path id="Path_5" data-name="Path 5" d="M0,3.04,3.876,9,15,0" transform="translate(8.5 10)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+</svg>

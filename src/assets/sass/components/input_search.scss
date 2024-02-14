@@ -1,0 +1,15 @@
+input[type='search']::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 1em;
+  width: 1em;
+  border-radius: 50em;
+  background-image: url('/public/assets/images/icon_clear.svg');
+  background-size: contain;
+  opacity: 0;
+  pointer-events: none;
+}
+
+input[type='search']:hover::-webkit-search-cancel-button {
+  opacity: .5;
+  pointer-events: all;
+}

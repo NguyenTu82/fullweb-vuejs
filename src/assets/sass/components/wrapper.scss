@@ -1,0 +1,35 @@
+@use '../foundation/mixin';
+.wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  @include mixin.tab {
+    padding: 0 2rem;
+  }
+  @include mixin.sp {
+    padding: 0 1rem;
+  }
+}
+
+.l_tab_wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  @include mixin.tab {
+    padding: 0 2rem;
+  }
+}
+
+.tab_wrapper {
+  max-width: 768px;
+  margin: 0 auto;
+  @include mixin.sp {
+    padding: 0 1rem;
+  }
+}
+
+.sp_wrapper {
+  max-width: 360px;
+  margin: 0 auto;
+  @include mixin.sp {
+    padding: 0 1rem;
+  }
+}

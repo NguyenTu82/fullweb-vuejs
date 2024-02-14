@@ -1,0 +1,13 @@
+{
+  "apps": [{
+    "name": "fullweb",
+    "cwd": ".",
+    "env": {
+    },
+    "script": "npm run prod",
+    "node_args": [],
+    "exec_interpreter": "none",
+    "exec_mode": "fork",
+    "log-fomate-date": "YYYY-MM-DD HH:mm Z"
+  }]
+}

@@ -1,0 +1,532 @@
+@use '../../foundation/variables' as variable;
+@use '../../foundation/mixin' as mixin;
+
+.order {
+  padding: 3rem 0;
+  @include mixin.sp {
+    padding: 2rem 0;
+  }
+  &__wrapper {
+    @include mixin.sp {
+      max-width: 360px;
+      margin: 0 auto;
+    }
+  }
+
+  &__emphasis {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    line-height: 1.333;
+    @include mixin.sp {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    &--time {
+      color: variable.$emphasis_color;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 4rem;
+      line-height: 1.333;
+      @include mixin.sp {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  &__reference {
+    display: flex;
+    margin-top: 2.4rem;
+    @include mixin.sp {
+      margin-top: 1.6rem;
+      justify-content: flex-start;
+    }
+    p {
+      font-size: 1.2rem;
+      color: variable.$header_sub_color;
+    }
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-top: 1.3rem;
+      @include mixin.sp {
+        font-size: 1.6rem;
+        margin-top: 0.8rem;
+      }
+      small {
+        font-size: 1rem;
+      }
+    }
+    &-value {
+      small {
+        margin-left: 0.8rem;
+      }
+    }
+    &-rate {
+      margin-left: 2rem;
+      &--jp {
+        margin-left: 2rem;
+        small {
+          margin-left: 0.4rem;
+        }
+      }
+      small {
+        margin-right: 0.8rem;
+      }
+    }
+  }
+  &__date {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-top: 2.2rem;
+    @include mixin.sp {
+      margin-top: 1.6rem;
+      justify-content: flex-start;
+    }
+    &-text {
+      font-size: 1.4rem;
+      @include mixin.sp {
+        font-size: 1.2rem;
+      }
+    }
+    &-time {
+      font-size: 1.2rem;
+      @include mixin.sp {
+        font-size: 1rem;
+      }
+      span {
+        margin-left: 1rem;
+        margin-right: 0.5rem;
+      }
+    }
+    &-square {
+      display: flex;
+      @include mixin.sp {
+      }
+      a {
+        max-width: 130px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-top: 0.7rem;
+        height: 2.2rem;
+        line-height: 2.2rem;
+        padding: 0;
+        @include mixin.sp {
+          max-width: 150px;
+        }
+        &:last-child {
+          margin-left: 1rem;
+          @include mixin.sp {
+            margin-left: 0;
+          }
+        }
+      }
+      &--full {
+        a {
+          margin-top: 0;
+          &:last-child {
+            @include mixin.sp {
+              margin-top: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__title {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 3rem;
+    @include mixin.sp {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__tags {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    .tag{
+      display: -webkit-box;
+      margin-left: 0.3rem;
+    }
+    &-number {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: variable.$header_sub_color;
+      @include mixin.sp {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  &__data {
+    margin-top: 3rem;
+    padding: 3rem 2rem;
+    @include mixin.sp {
+      margin-top: 2rem;
+      padding: 0;
+    }
+    &-text {
+      font-weight: 400;
+      font-size: 1rem;
+      margin-top: 0.8rem;
+      line-height: 1.333;
+    }
+    &-title {
+      color: variable.$base_color;
+      font-size: 1.4rem;
+      font-weight: 700;
+      @include mixin.sp {
+        font-size: 1.2rem;
+      }
+    }
+    &-question {
+      position: absolute;
+      top: 1rem;
+      left: 18rem;
+      @include mixin.sp {
+        left: 20rem;
+      }
+      @media screen and (max-width: 430px) {
+        left: unset;
+        right: 6px;
+      }
+    }
+    &-price {
+      font-size: 1.4rem;
+      font-weight: 500;
+      small {
+        font-size: 1rem;
+        transform: scale(0.8);
+        display: inline-block;
+        margin-left: 0.5rem;
+      }
+    }
+    &-buttons {
+      display: flex;
+      @include mixin.sp {
+        display: block;
+      }
+      a,button {
+        max-width: 13rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-top: 0.7rem;
+        height: 2.2rem;
+        line-height: 2.2rem;
+        padding: 0;
+        letter-spacing: 0.02em;
+        @include mixin.sp {
+          max-width: 150px;
+        }
+        &:last-child {
+          margin-left: 1rem;
+          @include mixin.sp {
+            margin-left: 0;
+          }
+        }
+      }
+      &--three {
+        display: flex;
+        gap: 1rem;
+        @include mixin.sp {
+          gap: 0.5rem;
+        }
+        a,button {
+          max-width: 8rem;
+          font-size: 1.2rem;
+          font-weight: 500;
+          height: 2.2rem;
+          line-height: 2.2rem;
+          margin-top: 0;
+          @include mixin.sp {
+            max-width: 5.3rem;
+            font-size: 1rem;
+          }
+        }
+      }
+      &--full {
+        a {
+          margin-top: 0;
+          &:last-child {
+            @include mixin.sp {
+              margin-top: 0.5rem;
+            }
+          }
+        }
+      }
+      &--block {
+        display: flex;
+        gap: 10px;
+        @include mixin.sp {
+          flex-direction: column;
+        }
+        div {
+          display: flex;
+          justify-content: space-between;
+        }
+        a {
+          margin-top: 0;
+          height: auto;
+          padding: 1rem;
+          padding-top: 0;
+          display: block;
+          width: 16rem;
+        }
+        p {
+          color: variable.$text_color;
+          font-weight: 400;
+          font-size: 1rem;
+          line-height: 1;
+          margin-top: 1rem;
+          letter-spacing: 0;
+        }
+        strong {
+          color: variable.$base_color;
+          font-weight: 500;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    &-flex {
+      display: flex;
+      align-items: flex-end;
+      @include mixin.sp {
+        display: block;
+      }
+    }
+
+    &-counter {
+      margin-top: 0.5rem;
+      &-text {
+        color: variable.$header_sub_color;
+        display: inline-block;
+        transform: scale(0.8);
+        font-size: 1rem;
+        @include mixin.sp {
+          margin-left: -0.8rem;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+    &-pass {
+      display: flex;
+      align-items: baseline;
+      label {
+        margin-left: 1rem;
+      }
+    }
+
+    &-limitation {
+      input[type='date'] {
+        margin-left: 1rem;
+        @include mixin.sp {
+          width: 140px;
+          margin-left: 0;
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    &-input {
+      background-color: variable.$white;
+      text-align: center;
+      font-size: 1.6rem;
+      height: 2.2rem;
+      width: 8rem;
+      &--error {
+        border: solid 1px variable.$text_color_secondary;
+      }
+    }
+
+    &--error {
+      font-size: 1rem;
+      color: variable.$text_color_secondary;
+      font-weight: 500;
+      margin-top: 0.8rem;
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  &__caution {
+    margin-top: 1.3rem;
+    line-height: 2;
+    text-align: center;
+    color: variable.$header_sub_color;
+    @include mixin.sp {
+      margin-top: 1rem;
+    }
+    a,button {
+      color: variable.$text_color_primary;
+    }
+  }
+
+  &__select {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    @include mixin.sp {
+      margin: 1rem 0;
+    }
+  }
+
+  &__modal {
+    position: sticky;
+    padding: 1rem 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    @include mixin.sp {
+      bottom: 7rem;
+    }
+    &-text {
+      text-align: center;
+    }
+  }
+  &__confirm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mixin.sp {
+      flex-direction: column;
+    }
+    a {
+      margin-top: 2rem;
+      @include mixin.sp {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+      }
+      &:last-child {
+        margin-left: 1rem;
+        @include mixin.sp {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 33.4%;
+    gap: 2rem;
+    @include mixin.sp {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 1rem;
+    }
+  }
+
+  &__forms {
+    padding-bottom: 2rem;
+    margin-top: 3rem;
+    background-color: variable.$smoke_color;
+    @include mixin.sp {
+      margin-top: 2rem;
+    }
+    &-button {
+      padding: 1rem 0;
+      display: none;
+      .button {
+        margin: 0 auto;
+      }
+      @include mixin.sp {
+        display: block;
+      }
+    }
+    &-text {
+      margin-top: 1.2rem;
+    }
+    &--closed {
+      @include mixin.sp {
+        height: 14rem;
+        overflow-y: scroll;
+        transition-duration: 0.3s;
+      }
+    }
+    &--open {
+      display: none;
+      @include mixin.sp {
+        display: block;
+      }
+    }
+    &--hidden {
+      @include mixin.sp {
+        display: none;
+      }
+    }
+    &--white {
+      padding: 3rem 2rem;
+      margin-top: 3rem;
+      @include mixin.sp {
+        padding: 0;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .update_progress__bar::before {
+    width: 0;
+  }
+  .update_progress__bar1 {
+      width: 100%;
+      background: #ededed;
+      height: 10px;
+      border-radius: 50px;
+      position: relative;
+      margin-top: 1rem;
+  }
+  .update_progress__bar1::after {
+      content: "";
+      animation: meter 5s linear forwards;
+      background: #43deb1;
+      border-radius: 3px;
+      width: 0;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+  @keyframes meter {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  .num-btn-gray {
+    background: #acacac;
+  }
+  .pointer {
+    cursor: pointer;
+  }
+  .left {
+    text-align: left;
+  }
+  .primary {
+    color: #45ccff;
+  }
+  .button__square.disabled {
+    background-color: #ededed;
+    cursor: not-allowed
+  }
+  .table__box--password.password {
+    margin-top: 0;
+  }
+  .boxTerm {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    user-select: none;
+    display: flex;
+    align-items: center;
+  }
+}

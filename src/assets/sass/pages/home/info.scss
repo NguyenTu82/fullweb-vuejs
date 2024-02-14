@@ -1,0 +1,164 @@
+@use '../../foundation/variables' as variable;
+@use '../../foundation/mixin' as mixin;
+
+.info {
+  padding: 2rem 0;
+  @include mixin.sp {
+    padding: 1rem 0;
+  }
+  &__container {
+    padding: 3rem 0;
+  }
+  &__list {
+    padding-top: 3rem;
+    @include mixin.sp {
+      padding-top: 1rem;
+    }
+  }
+  &__article {
+    border-bottom: solid 1px variable.$text_prohibited_color;
+    padding: 1.5rem 0;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    position: relative;
+    @include mixin.sp {
+      padding: 1rem 0;
+    }
+    &--new {
+      font-weight: 700;
+    }
+    &-notify {
+      position: absolute;
+      right: 5%;
+      @include mixin.sp {
+        width: 1.2rem;
+      }
+    }
+  }
+  &__source {
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+    text-align: right;
+  }
+  &__date {
+    font-size: 1.4rem;
+    letter-spacing: 0.1em;
+    small {
+      font-size: 1.2rem;
+      margin-left: 2.5rem;
+    }
+    @include mixin.sp {
+      font-size: 1.2rem;
+      small {
+        font-size: 1rem;
+        margin-left: 1.5rem;
+      }
+    }
+  }
+  &__title {
+    font-size: 1.4rem;
+    margin-top: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1.333;
+    @include mixin.sp {
+      font-size: 1.2rem;
+      img {
+        margin-left: 0.6rem;
+      }
+    }
+    &--important {
+      position: relative;
+      padding-left: 2.5em;
+      &::before {
+        content: '重要';
+        position: absolute;
+        left: -0.4rem;
+        bottom: 0;
+        font-size: 1rem;
+        color: variable.$white;
+        background-color: variable.$text_color_secondary;
+        padding: 0.3rem 0.6rem;
+        transform: scale(0.8);
+      }
+    }
+  }
+  &__detail {
+    padding: 4rem 0;
+    @include mixin.sp {
+      padding: 2rem 1rem;
+    }
+    &-date {
+      margin-top: 3rem;
+      font-weight: 700;
+      p {
+        font-size: 1.6rem;
+      }
+      small {
+        font-size: 1.4rem;
+        margin-left: 2.8rem;
+      }
+      @include mixin.sp {
+        margin-top: 2rem;
+      }
+    }
+    &-title {
+      font-size: 2rem;
+      font-weight: 700;
+      background-color: variable.$base_color;
+      padding: 1.2rem 1rem;
+      margin-top: 1.1rem;
+      line-height: 1.333;
+      @include mixin.sp {
+        font-size: 1.6rem;
+      }
+      &--important {
+        position: relative;
+        padding-left: 6.5rem;
+        @include mixin.sp {
+          padding-left: 5.5rem;
+        }
+        &::before {
+          content: '重要';
+          position: absolute;
+          top: 50%;
+          left: 1rem;
+          font-size: 1.6rem;
+          color: variable.$white;
+          background-color: variable.$text_color_secondary;
+          padding: 0.4rem 0.6rem;
+          font-weight: 400;
+          transform: translateY(-50%);
+          @include mixin.sp {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+    &-body {
+      margin-top: 2rem;
+      @include mixin.sp {
+        margin-top: 1rem;
+      }
+      p {
+        font-size: 1.6rem;
+        line-height: 1.625;
+        @include mixin.sp {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    a {
+      color: #007aff;
+    }
+  }
+  .unit {
+    p {
+      font-weight: normal;
+    }
+    .bold {
+      font-weight: bold;
+    }
+  }
+}

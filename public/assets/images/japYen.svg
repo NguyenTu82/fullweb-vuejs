@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="65px" viewBox="0 0 64 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 2</title>
+    <g id="Design-Comprehensive-Layout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="6-2-1入金画面-銀行カード未連携" transform="translate(-156.000000, -160.000000)">
+            <g id="Group-2" transform="translate(156.000000, 160.000000)">
+                <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="64" height="64"></rect>
+                <rect id="Rectangle" stroke="#222222" stroke-linecap="round" stroke-linejoin="round" x="14" y="1" width="36" height="63" rx="4"></rect>
+                <rect id="Rectangle" x="17" y="4" width="30" height="57" rx="3"></rect>
+                <path d="M24,3 L41,3 L41,5 C41,6.1045695 40.1045695,7 39,7 L26,7 C24.8954305,7 24,6.1045695 24,5 L24,3 L24,3 Z" id="Rectangle" fill="#FFFFFF"></path>
+                <path d="M33.04,43.752 L33.04,39.924 L37,39.924 L37,38.582 L33.04,38.582 L33.04,37.042 L37,37.042 L37,35.7 L33.634,35.7 L37.572,28 L35.02,28 L33.282,31.938 C32.798,33.016 32.358,34.094 31.852,35.238 L31.742,35.238 C31.258,34.116 30.818,33.016 30.356,31.938 L28.64,28 L26,28 L29.916,35.7 L26.572,35.7 L26.572,37.042 L30.51,37.042 L30.51,38.582 L26.572,38.582 L26.572,39.924 L30.51,39.924 L30.51,43.752 L33.04,43.752 Z" id="¥" fill="#222222" fill-rule="nonzero"></path>
+                <g id="Group-9" transform="translate(24.000000, 18.000000)" stroke="#222222" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="0.5" y1="3.39332" x2="2.236" y2="5.12832" id="Stroke-1"></line>
+                    <line x1="4.7778" y1="0.49982" x2="5.8198" y2="2.54482" id="Stroke-3"></line>
+                    <line x1="15.5" y1="3.39332" x2="13.765" y2="5.12832" id="Stroke-5"></line>
+                    <line x1="11.2222" y1="0.49982" x2="10.1802" y2="2.54482" id="Stroke-7"></line>
+                </g>
+                <path d="M44,4 C45.6568542,4 47,5.34314575 47,7 L47,58 C47,59.6568542 45.6568542,61 44,61 L20,61 C18.3431458,61 17,59.6568542 17,58 L17,7 C17,5.34314575 18.3431458,4 20,4 L23.5,4 L23.5,4.5 C23.5,5.5543618 24.3158778,6.41816512 25.3507377,6.49451426 L25.5,6.5 L38.5,6.5 C39.6045695,6.5 40.5,5.6045695 40.5,4.5 L40.5,4.5 L40.5,4 L44,4 Z" id="Combined-Shape" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

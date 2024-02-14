@@ -1,0 +1,51 @@
+@use "../foundation/variables" as variable;
+@use "../foundation/mixin";
+
+.footer {
+  padding: 4rem 0;
+  font-size: 1.4rem;
+  @include mixin.sp {
+    padding: 2rem 0;
+    font-size: 1.2rem;
+    &__logo {
+      display: block;
+      width: 100px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__infomation {
+    line-height: 1.714em;
+    margin-top: 3rem;
+    @include mixin.sp {
+      margin-top: 0.4rem;
+      line-height: 1.6em;
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    @include mixin.sp {
+      display: block;
+      margin-top: 1.6rem;
+    }
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    a {
+      margin-right: 3rem;
+    }
+    img {
+      margin-left: 1rem;
+    }
+  }
+  &__copyright {
+    @include mixin.sp {
+      margin-top: 2.2rem;
+    }
+  }
+}

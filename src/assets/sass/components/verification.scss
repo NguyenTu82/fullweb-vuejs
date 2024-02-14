@@ -1,0 +1,82 @@
+@use '../foundation/variables' as variable;
+@use '../foundation/mixin' as mixin;
+
+.verification {
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: variable.$header_sub_color;
+    margin-bottom: 3.8rem;
+    @include mixin.sp {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+    }
+  }
+  h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+  &__email {
+    text-align: center;
+    font-size: 1, 2rem;
+    font-weight: 500;
+    margin-top: 4.8rem;
+    @include mixin.sp {
+      margin-top: 2.5rem;
+    }
+  }
+  &__text {
+    width: max-content;
+    max-width: 36rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    &--error {
+      font-size: 10px;
+      color: variable.$text_color_secondary;
+      font-weight: 500;
+      margin-top: 4.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include mixin.sp {
+        margin-top: 2.5rem;
+      }
+      img {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  &__code {
+    display: grid;
+    grid-template-columns: repeat(4, 3rem);
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    input {
+      display: block;
+      font-size: 2.6rem;
+      border-bottom: solid 1px variable.$text_prohibited_color;
+      text-align: center;
+    }
+  }
+  &__button {
+    margin-top: 1rem;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: variable.$text_color_primary;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1.4rem;
+  }
+}

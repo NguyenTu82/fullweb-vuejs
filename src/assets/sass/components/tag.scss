@@ -1,0 +1,73 @@
+@use '../foundation/variables' as variable;
+
+.tag {
+  color: variable.$base_color;
+  border: solid 1px variable.$base_color;
+  background-color: variable.$button_color_tertiary;
+  border-radius: 5px;
+  padding: 0 0.8rem;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  &--black {
+    color: variable.$text_color;
+    border: solid 1px variable.$text_color;
+    background-color: variable.$white;
+    border-radius: 5px;
+    padding: 0 0.8rem;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
+  &--red {
+    color: red;
+    border: solid 1px red;
+    background-color: variable.$white;
+    border-radius: 5px;
+    padding: 0 0.8rem;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
+  &--small {
+    font-size: 10px;
+    padding: 0 0.4rem;
+    transform: scale(0.8);
+  }
+}
+
+.color_tag {
+  &--black {
+    line-height: 20px;
+    padding: 0 0.5rem;
+    border: solid 1px variable.$text_color;
+    color: variable.$text_color;
+  }
+  &--gray {
+    line-height: 20px;
+    padding: 0 0.5rem;
+    border: solid 1px variable.$header_sub_color;
+    color: variable.$header_sub_color;
+  }
+  &--main {
+    line-height: 20px;
+    padding: 0 0.5rem;
+    border: solid 1px variable.$base_color;
+    color: variable.$base_color;
+  }
+  &--sold{
+    line-height: 20px;
+    padding: 0 0.5rem;
+    border: solid 1px variable.$button_color_primary;
+    color: variable.$button_color_primary;
+  }
+  &--primary {
+    line-height: 20px;
+    padding: 0 0.5rem;
+    border: solid 1px variable.$text_color_primary;
+    color: variable.$text_color_primary;
+  }
+  &--secondary {
+    line-height: 20px;
+    padding: 0 0.5rem;
+    border: solid 1px variable.$text_color_secondary;
+    color: variable.$text_color_secondary;
+  }
+}

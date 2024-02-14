@@ -1,0 +1,226 @@
+@use '../foundation/variables' as variable;
+@use '../foundation/mixin' as mixin;
+
+.card {
+  background-color: variable.$white;
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  position: relative;
+  &--sphidden {
+    @include mixin.sp {
+      box-shadow: none;
+    }
+  }
+.card-no-shadow {
+  background-color: variable.$white;
+  &--sphidden {
+    @include mixin.sp {
+      box-shadow: none;
+    }
+  }
+ }
+    &__help {
+    position: absolute;
+    right: 2rem;
+    top: 0.5rem;
+    font-size: 1.4rem;
+
+    a {
+      color: #45ccff !important;
+    }
+  }
+}
+
+.list_card {
+  background-color: variable.$white;
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.1);
+  display: block;
+  padding: 2rem;
+  border-radius: 6px;
+  @media (hover: hover) {
+    &:hover {
+      background-color: variable.$button_color_tertiary;
+    }
+  }
+  @media (hover: none) {
+    &:active {
+      background-color: variable.$button_color_tertiary;
+    }
+  }
+  &--selected {
+    background-color: variable.$button_color_tertiary;
+    border: solid 1px variable.$base_color;
+  }
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    line-height: 1.333;
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      flex: 1;
+      min-width: 7.4em;
+    }
+    &--two {
+      min-height: 4.2rem;
+      @include mixin.sp {
+        min-height: auto;
+      }
+    }
+    &-infomation {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      min-width: 8rem;
+      gap: 0.5rem;
+      &--black {
+        border: solid 1px variable.$text_color;
+        color: variable.$text_color;
+      }
+      &--gray {
+        border: solid 1px variable.$header_sub_color;
+        color: variable.$header_sub_color;
+      }
+      &--main {
+        border: solid 1px variable.$base_color;
+        color: variable.$base_color;
+      }
+      &--primary {
+        border: solid 1px variable.$text_color_primary;
+        color: variable.$text_color_primary;
+      }
+      &--secondary {
+        border: solid 1px variable.$text_color_secondary;
+        color: variable.$text_color_secondary;
+      }
+    }
+  }
+
+  &__subtext {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 1rem 0;
+    color: variable.$header_sub_color;
+    h3 {
+      font-weight: 400;
+    }
+    p {
+      white-space: nowrap;
+    }
+    span {
+      margin-left: 0.8rem;
+      display: inline-block;
+    }
+  }
+
+  &__type {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    &-tags {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 0.5rem;
+      min-height: 4.2rem;
+      @include mixin.sp {
+        min-height: auto;
+      }
+      p {
+        color: variable.$base_color;
+        border: solid 1px variable.$base_color;
+        border-radius: 5px;
+        background-color: variable.$button_color_tertiary;
+        padding: 0 0.8rem;
+        line-height: 20px;
+        letter-spacing: 0.1em;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 1rem;
+    font-weight: 500;
+    width: 65px;
+    line-height: 20px;
+    margin-top: 0;
+  }
+
+  &__detail {
+    border-top: solid 1px variable.$base_color;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    &-price {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+      line-height: 1.666;
+      color: variable.$header_sub_color;
+      align-items: baseline;
+      span {
+        margin-right: 1rem;
+      }
+      strong {
+        font-weight: 700;
+      }
+      small {
+        transform: scale(0.8);
+        display: inline-block;
+        margin-left: 0.2rem;
+      }
+      &--black {
+        color: variable.$text_color;
+        small {
+          transform: scale(0.8);
+          display: inline-block;
+          margin-left: 0.2rem;
+        }
+      }
+    }
+    &-order {
+      display: flex;
+      justify-content: space-between;
+      a {
+        margin-top: 2rem;
+      }
+    }
+    &-button {
+      display: flex;
+      justify-content: center;
+      a {
+        margin-top: 2rem;
+        padding: 0.8rem 2.7rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+    }
+    &-announcement {
+      color: variable.$header_sub_color;
+      margin-top: 0.8rem;
+      text-align: center;
+    }
+  }
+  &__selectbutton {
+    height: 3rem;
+    padding: 0 4.5rem;
+    font-size: 1.4rem;
+    color: variable.$text_prohibited_color;
+    border: solid 1px variable.$text_prohibited_color;
+    margin-top: 2rem;
+    transition-duration: 0.3s;
+    &:hover {
+      background-color: variable.$button_color_tertiary;
+      color: variable.$base_color;
+      border: solid 1px variable.$base_color;
+    }
+    &--selected {
+      background-color: variable.$button_color_tertiary;
+      color: variable.$base_color;
+      border: solid 1px variable.$base_color;
+    }
+  }
+}

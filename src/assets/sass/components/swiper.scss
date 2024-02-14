@@ -1,0 +1,68 @@
+@use '../foundation/variables' as variable;
+@use '../foundation/mixin' as mixin;
+.swiper {
+  width: calc(100% - 110px);
+  padding: 2rem;
+  margin: 5rem 0;
+  @include mixin.sp {
+    width: calc(100% - 60px);
+    height: auto;
+    padding: 1rem;
+    margin: 2rem 0;
+  }
+  &__dummy {
+    height: 100px;
+    background-color: variable.$text_prohibited_color;
+    &:last-child {
+      margin-top: 10px;
+    }
+  }
+  &__navigation {
+    position: relative;
+    height: 0;
+  }
+  &-prev,
+  &-next {
+    position: absolute;
+    top: 150px;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mixin.sp {
+      top: 120px;
+    }
+    &--single {
+      position: absolute;
+      top: 76px;
+      z-index: 10;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include mixin.sp {
+        top: 80px;
+      }
+    }
+  }
+  &-prev,
+  &-prev--single {
+    left: 30px;
+    transform: rotate(180deg);
+    @include mixin.sp {
+      left: 10px;
+    }
+  }
+  &-next,
+  &-next--single {
+    right: 30px;
+    @include mixin.sp {
+      right: 10px;
+    }
+  }
+}
+
+.single-row {
+  margin: 2rem 0;
+}

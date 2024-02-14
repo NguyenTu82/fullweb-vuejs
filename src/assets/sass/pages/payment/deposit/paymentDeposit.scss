@@ -1,0 +1,23 @@
+.payment-deposit {
+  a {
+    cursor: pointer;
+  }
+  .button{
+    cursor: pointer;
+  }
+  .bg-img {
+    text-align: center;
+    img {
+      height: 12rem;
+    }
+  }
+
+  .payment__two_column_button {
+    .disableds {
+      background: #d1e5df;
+      color: #8f8f8f;
+      color: rgba(34, 34, 34, 0.6);
+      opacity: 1;
+    }
+  }
+}

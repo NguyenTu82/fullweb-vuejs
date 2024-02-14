@@ -1,0 +1,75 @@
+{
+  "name": "common-plugin",
+  "version": "0.1.0",
+  "author": "gt",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "prod": "vue-cli-service serve --mode production",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
+    "lib-dev": "vue-cli-service build --mode development --target lib --name common-plugin --dest lib package/index.js && npm pack",
+    "lib": "vue-cli-service build --mode production --target lib --name common-plugin --dest lib package/index.js && npm pack"
+  },
+  "main": "lib/common-plugin.umd.min.js",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "common-plugin"
+  ],
+  "exports": {
+    ".": "./lib/common-plugin.umd.js",
+    "./min": "./lib/common-plugin.umd.min.js",
+    "./css/bundle": "./lib/common-plugin.css"
+  },
+  "dependencies": {
+    "@grapecity/gcpdfviewer": "^3.1.5",
+    "axios": "^0.27.2",
+    "core-js": "^3.8.3",
+    "crypto-js": "^4.1.1",
+    "decimal.js": "^10.2.1",
+    "echarts": "^5.3.3",
+    "iconv-lite": "^0.6.3",
+    "lightweight-charts": "^3.8.0",
+    "moment": "^2.29.3",
+    "qrcodejs2": "^0.0.2",
+    "secure-ls": "^1.2.6",
+    "sha256": "^0.2.0",
+    "socket.io-client": "^2.4.0",
+    "swiper": "^8.1.4",
+    "vue": "^3.2.13",
+    "vue-cookies": "^1.8.1",
+    "vue-router": "^4.0.3",
+    "vuex": "^4.0.0",
+    "vuex-persistedstate": "^4.1.0",
+    "webpack": "^5.73.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-unit-jest": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/test-utils": "^2.0.0-0",
+    "@vue/vue3-jest": "^27.0.0-alpha.1",
+    "babel-jest": "^27.0.6",
+    "buffer": "^6.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "jest": "^27.0.5",
+    "less": "^4.1.3",
+    "less-loader": "^11.0.0",
+    "prettier": "^2.4.1",
+    "process": "^0.11.10",
+    "sass": "^1.32.7",
+    "sass-loader": "^12.0.0"
+  }
+}

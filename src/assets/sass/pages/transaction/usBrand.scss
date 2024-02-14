@@ -1,0 +1,45 @@
+.us-brand{
+    .brand__infomation img{
+		position: absolute;
+		right: 0;
+		top: 5px;
+		cursor: pointer;
+	}
+	.brand__infomation{
+		position: relative;
+		padding-right: 20px;
+	}
+    .paragraph{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+    .paragraph.open {
+        display: block;
+        height: 100% !important;
+        padding: 0;
+    }
+	.image-droptext.up{
+      transform: rotate(180deg);
+      transition: 0.3s;
+    }
+    .brand__date img{
+    cursor: pointer;
+    }
+    .l_tab_wrapper .brand__title{
+    align-items: baseline;
+    }
+    .brand__title .brand__title-buttons a{
+    width: 125px;
+    }
+    @media screen and (max-width: 768px) {
+    .brand__data-dummy {
+        min-height: unset;
+    }
+    .brand__title .brand__title-buttons a{
+        width: unset;
+    }
+    }
+}

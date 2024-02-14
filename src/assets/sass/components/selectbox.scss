@@ -1,0 +1,67 @@
+@use '../foundation/variables' as variable;
+@use '../foundation/mixin' as mixin;
+.selectbox {
+  padding: 0.4rem 1rem;
+  font-weight: 500;
+  position: relative;
+  text-align: center;
+  font-size: 1.2rem;
+  @include mixin.sp {
+    font-size: 1rem;
+  }
+  &__green {
+    border: solid 1px variable.$base_color;
+    background-color: variable.$button_color_tertiary;
+    color: variable.$base_color;
+    width: 180px;
+    max-width: 93%;
+    background-image: linear-gradient(
+        45deg,
+        transparent 50%,
+        variable.$base_color 50%
+      ),
+      linear-gradient(135deg, variable.$base_color 50%, transparent 50%);
+    background-position: calc(100% - 13px) 50%, calc(100% - 8px) 50%;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+  }
+  &__disabled {
+    border: solid 1px variable.$text_prohibited_color;
+    background-color: variable.$smoke_color_lv2;
+    color: variable.$text_prohibited_color;
+    width: 180px;
+    max-width: 93%;
+    background-image: linear-gradient(
+                    45deg,
+                    transparent 50%,
+                    variable.$text_prohibited_color 50%
+    ),
+    linear-gradient(135deg, variable.$text_prohibited_color 50%, transparent 50%);
+    background-position: calc(100% - 13px) 50%, calc(100% - 8px) 50%;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+  }
+  &__gray {
+    background-color: variable.$white;
+    width: 140px;
+    background-image: linear-gradient(
+        45deg,
+        transparent 50%,
+        variable.$text_prohibited_color 50%
+      ),
+      linear-gradient(
+        135deg,
+        variable.$text_prohibited_color 50%,
+        transparent 50%
+      );
+    background-position: calc(100% - 13px) 50%, calc(100% - 8px) 50%;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+    @include mixin.sp {
+      width: 100%;
+    }
+  }
+  &--error {
+    border: solid 1px variable.$text_color_secondary;
+  }
+}

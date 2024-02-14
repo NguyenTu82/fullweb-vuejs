@@ -1,0 +1,19 @@
+.payment{
+  input[disabled] {
+    color: #bdbdbd;
+    background-color: #f3f1f1;
+    opacity: 1;
+  }
+  button[disabled] {
+    color: #bdbdbd;
+    background-color: #ebe6e6;
+    opacity: 1;
+  }
+
+  a[disabled] {
+    color: #bdbdbd;
+    background-color: #ebe6e6;
+    opacity: 1;
+    border: solid 1px #ebe6e6;
+  }
+}

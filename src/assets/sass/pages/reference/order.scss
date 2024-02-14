@@ -1,0 +1,184 @@
+@use '../../foundation/variables' as variable;
+@use '../../foundation/mixin' as mixin;
+
+.reference_order {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  @include mixin.sp {
+    padding: 1rem 0;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include mixin.sp {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+    &-buttons {
+      display: flex;
+      min-width: 8rem;
+      a {
+        padding: 0 1rem;
+        font-size: 1rem;
+        line-height: 20px;
+        margin-top: 0;
+        font-weight: 500;
+        margin-left: 0.4rem;
+        &:first-child {
+          margin-left: 0;
+        }
+        @include mixin.sp {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  &__spacer {
+    margin-top: 3rem;
+    @include mixin.sp {
+      margin-top: 2rem;
+    }
+  }
+
+  &__tags {
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    min-width: 8rem;
+    gap: 0.2rem;
+    margin-left: 1.6rem;
+    &--between {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+  }
+
+  &__history {
+    margin-top: 3rem;
+    @include mixin.sp {
+      margin-top: 2rem;
+    }
+  }
+
+  &__table {
+    margin-top: 3rem;
+    padding: 3rem 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mixin.sp {
+      margin-top: 2rem;
+      padding: 0rem;
+    }
+    &-emphasis_center{
+      text-align: center;
+    }
+    &-emphasis {
+      color: variable.$base_color;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      @include mixin.sp {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &__modal {
+    padding: 1rem 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    @include mixin.sp {
+      bottom: 7rem;
+    }
+    &--cancel {
+      font-size: 1.4rem;
+      p {
+        text-align: center;
+        margin-top: 1rem;
+        color: variable.$header_sub_color;
+      }
+      .button {
+        margin-top: 1rem;
+      }
+    }
+    &-text {
+      text-align: center;
+    }
+  }
+  &__accordion {
+    p {
+      display: flex;
+      align-items: center;
+      img {
+        margin-left: 0.5rem;
+      }
+    }
+    &--close {
+      img {
+        transition-duration: 0.3s;
+        transform: rotate(180deg);
+      }
+    }
+    &-list {
+      width: 100%;
+      overflow-x: scroll;
+      &--close {
+        display: none;
+      }
+      &-head {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-bottom: solid 1px variable.$base_color;
+        margin-top: 1rem;
+        @include mixin.sp {
+          width: 160%;
+        }
+        p {
+          justify-content: center;
+          color: variable.$base_color;
+          padding: 1rem;
+        }
+      }
+      &-item {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        font-size: 1.2rem;
+        padding: 1rem 0;
+        border-bottom: solid 1px variable.$smoke_color_lv2;
+        @include mixin.sp {
+          width: 160%;
+        }
+        p {
+          justify-content: center;
+          align-items: center;
+        }
+        span {
+          color: variable.$header_sub_color;
+        }
+        small {
+          font-size: 1rem;
+          display: inline-block;
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+  &__back {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+}

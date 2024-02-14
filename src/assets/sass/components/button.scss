@@ -1,0 +1,363 @@
+@use '../foundation/variables' as variable;
+@use '../foundation/mixin' as mixin;
+.button {
+  border-radius: 50px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: variable.$text_color;
+  display: block;
+  text-align: center;
+  margin-top: 3rem;
+  position: relative;
+  transition-duration: 0.3s;
+  @include mixin.sp {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+  }
+  img {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &--textsmall {
+    font-size: 1.2rem;
+    @include mixin.sp {
+      font-size: 1.1rem;
+    }
+  }
+  //　color
+  &__main {
+    background-color: variable.$base_color;
+    border: solid 1px variable.$base_color;
+    &:hover {
+      background-color: variable.$base_color_bg;
+      border: solid 1px variable.$base_color_bg;
+    }
+  }
+  &__enpasis {
+    background-color: variable.$emphasis_color;
+  }
+  &__white {
+    background-color: variable.$white;
+    color: variable.$base_color;
+    border: solid 1px variable.$base_color;
+    @media (hover: hover) {
+      &:hover {
+        background-color: variable.$base_color;
+        color: variable.$white;
+      }
+    }
+    @media (hover: none) {
+      &:active {
+        background-color: variable.$base_color;
+        color: variable.$white;
+      }
+    }
+  }
+  // blue
+  &__primary {
+    background-color: variable.$button_color_primary;
+    color: variable.$white;
+    border: solid 1px variable.$button_color_primary;
+    &:hover {
+      background-color: variable.$white;
+      color: variable.$button_color_primary;
+    }
+    // 背景青 文字白
+    &--textcolor {
+      background-color: variable.$text_color_primary;
+      color: variable.$white;
+      border: solid 1px variable.$text_color_primary;
+      &:hover {
+        background-color: variable.$white;
+        color: variable.$text_color_primary;
+      }
+    }
+    // 背景白 文字青
+    &--reverse {
+      background-color: variable.$white;
+      color: variable.$text_color_primary;
+      border: solid 1px variable.$text_color_primary;
+      &:hover {
+        background-color: variable.$text_color_primary;
+        color: variable.$white;
+      }
+    }
+  }
+  &__secondary {
+    background-color: variable.$button_color_secondary;
+    color: variable.$white;
+    border: solid 1px variable.$button_color_secondary;
+    &:hover {
+      background-color: variable.$white;
+      color: variable.$button_color_secondary;
+    }
+  }
+  &__disabled {
+    background-color: variable.$smoke_color_lv2;
+    color: variable.$text_prohibited_color;
+    cursor: not-allowed;
+  }
+
+  // size
+  &__full {
+    width: 100%;
+    height: 44px;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    @include mixin.sp {
+      height: 40px;
+      max-width: 240px;
+    }
+  }
+  // 2colum button
+  &__medium {
+    width: calc(50% - 10px);
+    max-width: 200px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 1.4rem;
+    @include mixin.sp {
+      font-size: 1.2rem;
+    }
+  }
+  &__small {
+    width: 12rem;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    &:nth-child(2n) {
+      margin: 0 1rem;
+      margin-top: 3rem;
+      @include mixin.sp {
+        margin-top: 2rem;
+      }
+    }
+    @include mixin.sp {
+      font-size: 1rem;
+      width: 10rem;
+    }
+  }
+  &__chip {
+    width: max-content;
+    height: 20px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    margin-top: 0;
+    img {
+      position: static;
+      display: inline;
+      transform: none;
+      margin-right: 0.5rem;
+    }
+  }
+  &__back {
+    img {
+      left: 5%;
+    }
+  }
+
+  // 四角形ボタン
+  &__square {
+    text-align: center;
+    font-size: 1.4rem;
+    letter-spacing: 0.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    border-radius: 0;
+    background-color: variable.$white;
+    color: variable.$text_prohibited_color;
+    border: solid 1px variable.$text_prohibited_color;
+    padding: 1.4rem 0;
+    position: relative;
+    img {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      @include mixin.sp {
+        width: 1.2rem;
+      }
+    }
+    @include mixin.sp {
+      font-size: 1.2rem;
+      padding: 0.8rem 0;
+    }
+    &--selected {
+      text-align: center;
+      font-size: 1.4rem;
+      letter-spacing: 0.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 240px;
+      border-radius: 0;
+      border: solid 1px variable.$base_color;
+      background-color: variable.$button_color_tertiary;
+      color: variable.$base_color;
+      padding: 1.4rem 0;
+      position: relative;
+      img {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        @include mixin.sp {
+          width: 1.2rem;
+        }
+      }
+      @include mixin.sp {
+        font-size: 1.2rem;
+        padding: 0.8rem 0;
+      }
+    }
+    &--error {
+      border: solid 1px variable.$text_color_secondary;
+    }
+  }
+
+  // 背景画像ボタン
+  &__image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: variable.$white;
+    width: 300px;
+    margin: 0.5rem 0;
+    border: solid 1px variable.$text_prohibited_color;
+    @include mixin.sp {
+      width: 100%;
+    }
+    p {
+      flex: 1;
+      text-align: center;
+      font-size: 1.2rem;
+      @include mixin.sp {
+        font-size: 1rem;
+      }
+    }
+    &--selected {
+      background-color: variable.$button_color_tertiary;
+      color: variable.$base_color;
+      border: solid 1px variable.$base_color;
+      p {
+        color: variable.$base_color;
+      }
+    }
+    &-dummy {
+      flex: 1;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      @include mixin.sp {
+        height: 60px;
+      }
+    }
+  }
+  &__pointer {
+    cursor: pointer;
+  }
+}
+
+.scrollTopButton {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  right: 30px;
+  bottom: 20px;
+  background-color: variable.$base_color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: variable.$layer_lv1;
+  transition-duration: 0.3s;
+  @include mixin.sp {
+    width: 60px;
+    height: 60px;
+    right: 5px;
+    bottom: 5px;
+    img {
+      width: 40px;
+    }
+  }
+}
+.ly_button {
+  margin-top: 1rem;
+}
+
+.reference_order_tips {
+  color: variable.$tips_color;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 1rem;
+}
+.payment__confirm {
+  .disableds {
+    background: #d1e5df;
+    color: #8f8f8f;
+    color: rgba(34, 34, 34, 0.6);
+    opacity: 1;
+  }
+}
+
+.cRoundButton {
+  border-radius: 0.24rem;
+  .button-fill {
+    height: 0.46rem;
+    margin-top: 0.08rem;
+    font-size: 0.16rem;
+    opacity: 1;
+    background: #43deb1;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 0.24rem;
+    color: #222222;
+    font-weight: 550;
+    display: flex;
+    align-items: center;
+  }
+  .button-fill-small {
+    height: 0.34rem;
+    margin-top: 0.08rem;
+    font-size: 0.14rem;
+    opacity: 1;
+    background: #43deb1;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 0.24rem;
+    color: #222222;
+    font-weight: 550;
+    display: flex;
+    align-items: center;
+  }
+
+  .disableds {
+    background: #d1e5df;
+    color: #8f8f8f;
+    color: rgba(34, 34, 34, 0.6);
+    opacity: 1;
+    border-color: #d1e5df;
+  }
+}

@@ -1,0 +1,175 @@
+@use '../../foundation/variables' as variable;
+@use '../../foundation/mixin' as mixin;
+
+.ranking {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  @include mixin.sp {
+    padding: 1rem 0;
+  }
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include mixin.sp {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &-caution {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 1.5rem;
+      @include mixin.sp {
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+      a {
+        font-size: 1.4rem;
+        color: variable.$text_color_primary;
+      }
+      img {
+        width: 14px;
+      }
+      p {
+        font-size: 1rem;
+        color: variable.$header_sub_color;
+        font-weight: 400;
+        min-width: 210px;
+      }
+      @include mixin.sp {
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        p{
+          min-width: unset;
+        }
+      }
+    }
+  }
+
+  &__list {
+    padding: 2rem 3rem;
+    margin-top: 3rem;
+    @include mixin.sp {
+      padding: 0;
+      margin-top: 2rem;
+    }
+    &-head {
+      display: grid;
+      grid-template-columns: 3fr 4fr 4fr 4fr;
+      align-items: flex-end;
+      text-align: center;
+      border-bottom: 1px solid variable.$base_color;
+      padding-bottom: 1rem;
+      @include mixin.sp {
+        grid-template-columns: 2fr 5fr 5fr 4fr;
+      }
+      h2 {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: variable.$base_color;
+        line-height: 1.333;
+        @include mixin.sp {
+          font-size: 1.2rem;
+        }
+      }
+      span {
+        color: variable.$text_color;
+      }
+    }
+    &-item {
+      display: grid;
+      position: relative;
+      grid-template-columns: 3fr 4fr 4fr 4fr;
+      align-items: center;
+      font-size: 1.2rem;
+      line-height: 1.333;
+      text-align: right;
+      padding-top: 1.4rem;
+      padding-bottom: 0.7rem;
+      padding-right: 6rem;
+      border-bottom: 1px solid variable.$smoke_color_lv2;
+      @include mixin.sp {
+        grid-template-columns: 2fr 5fr 5fr 4fr;
+        padding-right: 2rem;
+      }
+      strong {
+        font-size: 1.4rem;
+        font-weight: 700;
+      }
+      small {
+        font-size: 1rem;
+      }
+      img {
+        position: absolute;
+        right: 1rem;
+        @include mixin.sp {
+          right: 0;
+        }
+      }
+      &-rank {
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        &--first {
+          background-image: url(/public/assets/images/crown.png);
+          color: #f5c142;
+        }
+        &--second {
+          background-image: url(/public/assets/images/crown.png);
+          color: #afaeae;
+        }
+        &--third {
+          background-image: url(/public/assets/images/crown.png);
+          color: #a7700a;
+        }
+      }
+      &-name {
+        text-align: left;
+        padding-left: 2rem;
+        @include mixin.sp {
+          text-align: center;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  &__category {
+    background-color: variable.$base_color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 16rem;
+    border-radius: 30px;
+    border: solid 1px variable.$header_sub_color;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    @include mixin.sp {
+      height: 12rem;
+      font-size: 1.4rem;
+      line-height: 1.333;
+    }
+  }
+  &__dummy {
+    background-color: variable.$text_prohibited_color;
+    width: 100%;
+    height: 100vh;
+    margin-top: 2rem;
+  }
+  .norankingdata {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  .ranking__list-item {
+    cursor: pointer;
+  }
+}

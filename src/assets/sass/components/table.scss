@@ -1,0 +1,350 @@
+@use '../foundation/variables' as variable;
+@use '../foundation/mixin' as mixin;
+
+.table {
+  display: block;
+  width: 100%;
+  &.table-custom-transaction {
+    .table__box-title{
+      width: 40%;
+    }
+    .table__box-value--small {
+      width: 60%;
+    }
+  }
+  &__box {
+    display: flex;
+    &--password {
+      margin-top: 2rem;
+      @include mixin.sp {
+        margin-top: 1rem;
+      }
+    }
+    &-space {
+      height: 2.6rem;
+      width: 100%;
+      @include mixin.sp {
+        height: 2.2rem;
+      }
+    }
+    &-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: variable.$button_color_tertiary;
+      font-size: 1.4rem;
+      font-weight: 700;
+      padding: 1.2rem 0;
+      width: 40.531%;
+      margin-top: 0.2rem;
+      position: relative;
+      @include mixin.sp {
+        font-size: 1.2rem;
+        padding: 1.2rem;
+      }
+      &.custom{
+        display: block;
+        span{
+          display: block;
+        }
+      }
+      &--small {
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 0.5rem 0;
+        width: 47.531%;
+        @include mixin.sp {
+          font-size: 1rem;
+        }
+      }
+      &-fix {
+        color: variable.$text_color_secondary;
+        font-weight: 400;
+        border: solid 1px variable.$text_color_secondary;
+        border-radius: 6px;
+        font-size: 1.2rem;
+        padding: 0.5rem;
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        @include mixin.sp {
+          font-size: 1rem;
+          right: 0.4rem;
+          padding: 0.3rem;
+        }
+      }
+    }
+    &-value {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      background-color: variable.$smoke_color;
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-left: 0.2rem;
+      padding: 1rem 1rem 1rem 1.3rem;
+      width: 58.738%;
+      margin-top: 0.2rem;
+      line-height: 1.333;
+      &--item{
+        flex: 1;
+      }
+      &--wrap{
+        flex: 1;
+        width: 100%;
+      }
+      &--text{
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-align: right;
+      }
+      &--color_title{
+          color: variable.$base_color;
+          border-bottom: 2px solid variable.$base_color;
+          padding: 1.6rem 0rem 0.8rem 0rem;
+          font-weight: bold;
+          font-size: 1.5rem;
+          text-align: left;
+      }
+      &--flex_wrap{
+        display: flex;
+        padding: 1rem 0rem;
+        border-bottom: 1px solid #dddddd;
+      }
+      &--title{
+        text-align: left;
+      }
+      @include mixin.sp {
+        font-size: 1.2rem;
+        padding: 0.8rem 1rem;
+      }
+      small {
+        margin-left: 0.6rem;
+        font-size: 1rem;
+      }
+      strong {
+        font-weight: 700;
+      }
+      &--small {
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        width: 45.738%;
+        @include mixin.sp {
+          font-size: 1rem;
+          p {
+            white-space: nowrap;
+          }
+          .non-whitespace {
+            white-space: unset;
+          }
+          small {
+            transform: scale(0.8);
+            display: inline-block;
+            margin-left: 0;
+          }
+        }
+      }
+      &--result {
+        align-items: flex-end;
+        text-align: right;
+        &--wrap{
+          flex: 1;
+          width: 100%;
+          &--flex{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            img{
+              margin-left: 0.6rem;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      &--square {
+        background-color: variable.$white;
+        text-align: center;
+        font-size: 1.2rem;
+        width: 12rem;
+        font-weight: 500;
+        padding: 0.5rem 0;
+        &:last-child {
+          margin-left: 1rem;
+          width: 9rem;
+        }
+        @include mixin.sp {
+          width: 8rem;
+          margin-left: 0;
+          &:last-child {
+            margin-left: 0.5rem;
+            width: 8rem;
+          }
+        }
+        &-date {
+          font-size: 1rem;
+          font-weight: normal;
+        }
+        &--important {
+          background-color: variable.$button_color_tertiary;
+          color: variable.$base_color;
+          width: 18rem;
+          text-align: center;
+          font-size: 1.2rem;
+          font-weight: 500;
+          padding: 0.5rem 0;
+          @include mixin.sp {
+            font-size: 1.2rem;
+            width: 12rem;
+            align-items: center;
+          }
+        }
+      }
+      &-rate {
+        small {
+          margin-left: 0;
+          margin-right: 0.4rem;
+        }
+      }
+    }
+  }
+}
+
+.base_color_table {
+  background-color: variable.$button_color_tertiary;
+  text-align: center;
+  padding: 1rem 1rem 3rem 1rem;
+  font-size: 1.4rem;
+  @include mixin.sp {
+    font-size: 1.2rem;
+  }
+  small {
+    font-size: 1.2rem;
+    @include mixin.sp {
+      font-size: 1rem;
+    }
+  }
+  .five_columns {
+    grid-template-columns: repeat(5, 1fr);
+    display: grid;
+  }
+    .item{
+    padding: 1rem 0rem;
+    .last_item{
+      padding-right: 1rem;
+      text-align: right;
+    }
+  }
+  .four_columns {
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+  }
+  .three_columns {
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+  }
+  .cell_large {
+    padding-top: 1.8rem;
+  }
+  .brand_text{
+    margin-bottom: 0.5rem;
+  }
+  &__head {
+    border-bottom: solid 1px variable.$base_color;
+    p {
+      padding: 1.2rem 0;
+    }
+    strong {
+      color: variable.$base_color;
+    }
+    &--black {
+      border-bottom: solid 1px variable.$base_color;
+      p {
+        padding: 1.2rem 0;
+      }
+    }
+  }
+  &__value {
+    border-bottom: solid 1px variable.$smoke_color_lv2;
+    position: relative;
+    @include mixin.sp {
+      font-size: 1.1rem;
+    }
+    &-date {
+      span {
+        display: block;
+        margin-top: 0.4rem;
+        font-size: 1rem;
+        transform: scale(0.8);
+        color: variable.$header_sub_color;
+      }
+      &--large {
+        span {
+          color: variable.$header_sub_color;
+          margin-left: 1rem;
+        }
+      }
+    }
+    &-price {
+      small {
+        font-size: 1rem;
+        display: inline-block;
+        transform: scale(0.8);
+        margin-left: 0.2rem;
+      }
+    }
+    p,
+    a {
+      padding: 0.6rem 0;
+    }
+    u {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    img {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      @include mixin.sp {
+        right: 0;
+      }
+    }
+  }
+}
+.extra-wrap{
+  width: 100%;
+}
+.extra-list-container {
+  width: 100%;
+}
+.extra-list-container .extra_title{
+  display: flex;
+  border-bottom: solid 1px variable.$base_color;
+}
+.extra-list-container .extra_title span{
+  flex: 1;
+  text-align: center;
+  height: 4rem;
+  line-height: 4rem;
+  color: variable.$base_color;
+
+  font-weight: bold;
+}
+.extra-list-container .unit{
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+.extra-list-container .unit span{
+  flex: 1;
+  text-align: center;
+  height: 3.5rem;
+  line-height: 3.5rem;
+}
+
+.click{
+  cursor: pointer;
+}

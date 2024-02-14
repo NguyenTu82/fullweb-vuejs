@@ -1,0 +1,39 @@
+@use '../foundation/variables' as variable;
+@use '../foundation/mixin' as mixin;
+.update_progress {
+  text-align: center;
+  max-width: 260px;
+  margin: 0 auto;
+  p {
+    font-size: 1.4rem;
+    letter-spacing: 0.08em;
+    margin-top: 3rem;
+    @include mixin.sp {
+      margin-top: 2rem;
+    }
+  }
+  strong {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: variable.$base_color;
+    margin: 0 0.8rem;
+  }
+  &__bar {
+    width: 100%;
+    background-color: variable.$smoke_color_lv2;
+    height: 10px;
+    border-radius: 50px;
+    position: relative;
+    margin-top: 1rem;
+    &::before {
+      content: '';
+      background-color: variable.$base_color;
+      width: 60%;
+      height: 10px;
+      border-radius: 50px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}

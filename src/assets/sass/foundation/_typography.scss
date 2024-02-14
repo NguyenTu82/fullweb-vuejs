@@ -1,0 +1,171 @@
+@use '../foundation/variables' as variable;
+@use '../foundation/mixin' as mixin;
+
+// 価格の比較テキスト
+.comparison_text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  &--table {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  &--card {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  &.custom{
+    display: block;
+    span, small{
+      display: block;
+      margin-right: 0;
+    }
+    small{
+      font-size: 0.8rem;
+      transform: scale(1)
+    }
+  }
+  span {
+    font-size: 1rem;
+    margin-right: 0.4rem;
+  }
+  small {
+    font-size: 1rem;
+    transform: scale(0.8);
+    display: inline-block;
+  }
+}
+.high {
+  color: variable.$text_color_secondary;
+}
+.low {
+  color: variable.$text_color_primary;
+}
+.black{
+  color: variable.$text_color_black;
+}
+.blue{
+  color: variable.$text_color_blue;
+}
+
+// 詳細ページタイトル
+.detail {
+  &__title {
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    position: relative;
+    padding-left: 1.6rem;
+    @include mixin.sp {
+      font-size: 1.8rem;
+      letter-spacing: 0.1em;
+    }
+    span {
+      font-family: variable.$font_en;
+      letter-spacing: 0.02em;
+    }
+    &::before {
+      content: '';
+      width: 10px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      background-color: variable.$base_color;
+      display: inline-block;
+    }
+    &--buy {
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      &::before {
+        content: '買';
+        font-size: 2rem;
+        font-weight: 500;
+        width: 3.2rem;
+        height: 3.2rem;
+        background-color: variable.$button_color_secondary;
+        color: variable.$white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 0;
+        @include mixin.sp {
+          font-size: 1.4rem;
+          letter-spacing: 0.1em;
+          width: 2.6rem;
+          height: 2.6rem;
+        }
+      }
+      span {
+        font-family: variable.$font_en;
+        letter-spacing: 0.02em;
+      }
+      @include mixin.sp {
+        font-size: 1.4rem;
+        letter-spacing: 0.1em;
+      }
+    }
+    &--sell {
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      &::before {
+        content: '売';
+        font-size: 2rem;
+        font-weight: 500;
+        width: 3.2rem;
+        height: 3.2rem;
+        background-color: variable.$button_color_primary;
+        color: variable.$white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 0;
+        @include mixin.sp {
+          font-size: 1.4rem;
+          letter-spacing: 0.1em;
+          width: 2.6rem;
+          height: 2.6rem;
+        }
+      }
+      span {
+        font-family: variable.$font_en;
+        letter-spacing: 0.02em;
+      }
+      @include mixin.sp {
+        font-size: 1.4rem;
+        letter-spacing: 0.1em;
+      }
+    }
+  }
+  &__exchange {
+    color: variable.$header_sub_color;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding-left: 1.6rem;
+    margin-top: 2rem;
+    @include mixin.sp {
+      font-size: 1.4rem;
+      margin-top: 1rem;
+      padding-left: 0;
+    }
+  }
+  &__infomation {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  &__number {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    small {
+      font-size: 1.2rem;
+      margin-left: 1rem;
+    }
+  }
+}

@@ -1,0 +1,304 @@
+@use '../foundation/variables' as variable;
+@use '../foundation/mixin' as mixin;
+.header {
+  width: 100vw;
+  background-color: variable.$white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: variable.$layer_lv2;
+  @include mixin.sp {
+    &__logo {
+      display: block;
+      width: 120px;
+      img {
+        width: 100%;
+      }
+    }
+    padding: 0 1rem;
+  }
+  &__container {
+    display: flex;
+    height: 68px;
+    align-items: center;
+    justify-content: space-between;
+    @include mixin.sp {
+      height: variable.$sp_header_height;
+    }
+    &-flexstart {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+  &__open {
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+    gap: 1rem;
+    @include mixin.sp {
+      margin-left: 1rem;
+      gap: 0.5rem;
+    }
+    p {
+      font-size: 24px;
+      font-weight: 700;
+      color: variable.$base_color;
+      @include mixin.sp {
+        font-size: 1.2rem;
+      }
+    }
+    img {
+      @include mixin.sp {
+        width: 1.6rem;
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    &-item {
+      font-size: 1rem;
+      font-weight: 700;
+      border: solid 1px variable.$text_color;
+      padding: 0.5rem 0.8rem;
+      display: flex;
+      align-items: center;
+      margin-left: 1rem;
+      img {
+        margin-left: 0.5rem;
+      }
+      @include mixin.sp {
+        display: none;
+      }
+      &--nohidden {
+        @include mixin.sp {
+          display: block;
+        }
+      }
+    }
+  }
+  &__hamburger {
+    display: none;
+    @include mixin.sp {
+      display: block;
+      z-index: variable.$layer_lv3;
+    }
+  }
+  &__notification {
+    position: relative;
+    margin-right: 1rem;
+    &--point {
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: variable.$emphasis_color;
+        top: 0;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+    }
+  }
+  &__sub {
+    background-color: variable.$header_sub_color;
+    @include mixin.sp {
+      display: none;
+    }
+    &-container {
+      height: 70px;
+      display: flex;
+      align-items: center;
+    }
+    &-item {
+      display: block;
+      position: relative;
+      color: variable.$white;
+      border-bottom: solid 1px variable.$white;
+      padding: 0.8rem 0;
+      font-size: 1.4rem;
+      width: 8rem;
+      text-align: center;
+      margin-right: 4rem;
+      z-index: variable.$layer_lv2;
+      &:hover {
+        color: variable.$base_color;
+        border-bottom: solid 1px variable.$base_color;
+        &::after {
+          border-right: 5px solid variable.$base_color;
+          border-bottom: 5px solid variable.$base_color;
+        }
+      }
+      &::after {
+        content: '';
+        display: block;
+        background-color: variable.$white;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-right: 5px solid variable.$white;
+        border-bottom: 5px solid variable.$white;
+        border-left: 5px solid variable.$header_sub_color;
+        border-top: 5px solid variable.$header_sub_color;
+        z-index: variable.$layer_minus;
+      }
+      &--active {
+        color: variable.$base_color;
+        border-bottom: solid 1px variable.$base_color;
+        &::after {
+          border-right: 5px solid variable.$base_color;
+          border-bottom: 5px solid variable.$base_color;
+        }
+      }
+    }
+    &-list {
+      position: absolute;
+      top: variable.$header_height;
+      width: 100vw;
+      background-color: rgba(51, 51, 51, 0.95);
+      left: 0;
+      transition-duration: 0.3s;
+    }
+    &-links {
+      display: flex;
+      align-items: center;
+      height: 106px;
+      a {
+        display: block;
+        color: variable.$white;
+        font-size: 1.6rem;
+        margin-right: 2rem;
+      }
+      p {
+        display: block;
+        color: variable.$white;
+        font-size: 1.4rem;
+        padding-bottom: 1rem;
+        border-bottom: solid 1px variable.$white;
+      }
+      img {
+        margin-right: 1rem;
+      }
+      &--jp {
+        margin-right: 2rem;
+      }
+      &--extra {
+        padding-top: 1rem;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  &__spmenu {
+    display: none;
+    @include mixin.sp {
+      display: block;
+      position: fixed;
+      background-color: rgba(51, 51, 51, 0.95);
+      width: 100vw;
+      height: 100vh;
+      padding: 10rem 4rem;
+      top: 0;
+      left: 0;
+      z-index: variable.$layer_lv2;
+      transition-duration: 0.3s;
+      overflow: auto;
+    }
+    &-sub {
+      a {
+        color: variable.$white;
+        display: flex;
+        align-items: center;
+        background-color: variable.$text_color;
+        padding: 1rem;
+        border-bottom: solid 1px variable.$white;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+      img {
+        margin-right: 10px;
+      }
+    }
+    &-links {
+      &--jp {
+        p {
+          color: variable.$white;
+          background-color: variable.$header_sub_color;
+          padding: 0.8rem 1rem;
+        }
+      }
+      &--extra {
+        display: flex;
+        align-items: center;
+        background-color: variable.$text_color;
+        padding: 1rem;
+        border-bottom: solid 1px variable.$white;
+        a {
+          color: variable.$white;
+          display: flex;
+          padding: 0;
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+    &-item {
+      display: block;
+      position: relative;
+      font-size: 1.2rem;
+      color: variable.$white;
+      text-align: left;
+      width: 100%;
+      padding: 2rem 1em;
+      border-bottom: solid 1px variable.$white;
+      &:hover {
+        color: variable.$base_color;
+        border-bottom: solid 1px variable.$base_color;
+        &::after {
+          border-right: 5px solid variable.$base_color;
+          border-bottom: 5px solid variable.$base_color;
+        }
+      }
+      &::after {
+        content: '';
+        display: block;
+        background-color: variable.$white;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-right: 5px solid variable.$white;
+        border-bottom: 5px solid variable.$white;
+        border-left: 5px solid rgba(51, 51, 51, 0.95);
+        border-top: 5px solid rgba(51, 51, 51, 0.95);
+        z-index: variable.$layer_minus;
+      }
+      &--active {
+        color: variable.$base_color;
+        border-bottom: solid 1px variable.$base_color;
+        &::after {
+          border-right: 5px solid variable.$base_color;
+          border-bottom: 5px solid variable.$base_color;
+        }
+      }
+    }
+  }
+  .header_title {
+    line-height: 27px;
+  }
+}
+
+.sp_close {
+  left: 100vw;
+}
+
+.nosub {
+  position: relative;
+}

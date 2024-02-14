@@ -1,0 +1,290 @@
+// B412
+.investment-brand{
+    .brand__data-dummy--half.chart-custom{
+        background: #fff;
+    }
+    .paragraph{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-transition: height .3s;
+        transition: height .3s;
+        -webkit-line-clamp: 2;
+    }
+    .paragraph.open {
+        display: block;
+        transition: height 0.3s;
+        height: 100% !important;
+        padding: 0;
+    }
+    .image-droptext{
+        cursor: pointer;
+        transform: rotate(180deg);
+    }
+    .image-droptext.up{
+        transition: 0.3s;
+        transform: rotate(0deg);
+    }
+    .brand__modal{
+        z-index: 10;
+    }
+    @media screen and (max-width: 768px){
+        .brand__tags{
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+    }
+
+}
+.fund-chart{
+    &.StockTrendGraph {
+        width: 100%;
+        background: #ffffff;
+        .header-chart {
+          padding-left: 2px;
+          display: flex;
+          justify-content: space-between;
+          .big-title {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 32px;
+            color: #3bc49d;
+          }
+          .pull-list {
+            width: 129px;
+            height: 32px;
+            background: #ffffff;
+            border: 1px solid #a3a3a3;
+            border-radius: 6px;
+            .display {
+              padding-left: 10px;
+              padding-right: 10px;
+              display: flex;
+              justify-content: space-between;
+              line-height: 32px;
+              font-size: 14px;
+      
+              .title-chart {
+                font-weight: 300;
+                color: #222222;
+              }
+              .value {
+                font-weight: 600;
+                color: #3bc49d;
+                .icon {
+                  margin-left: 10px;
+                }
+              }
+            }
+          }
+        }
+        .chart {
+          margin-top: 10px;
+          width: 100%;
+          height: 212.25px;
+          position: relative;
+          padding: 0;
+        }
+        .floating-tooltip-2 {
+          width: 200px;
+          position: absolute;
+          display: none;
+          padding: 8px;
+          box-sizing: border-box;
+          font-size: 12px;
+          color: #131722;
+          background-color: rgba(255, 255, 255, 1);
+          text-align: left;
+          z-index: 1000;
+          top: 12px;
+          left: 12px;
+          pointer-events: none;
+          border: 1px solid rgba(0, 150, 136, 1);
+          border-radius: 2px;
+        }
+        .chart-label {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-top: 5px;
+          & > div {
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            font-size:11px;
+            &:first-child {
+              margin-left: 0;
+            }
+            &::before {
+              content: '';
+              display: block;
+              width: 20px;
+              height: 10px;
+              margin-right: 5px;
+            }
+            &.label-price::before {
+              background: #43deb1;
+            }
+            &.label-price-d::before {
+              background: #1b9975;
+            }
+            &.label-price-capital::before {
+              background: #dcf8f0;
+            }
+          }
+        }
+        .price-label,
+        .price-label-right {
+          left: 0;
+          pointer-events: none;
+          position: absolute;
+          text-align: center;
+          top: -1px;
+          user-select: none;
+          width: 100%;
+          z-index: 3;
+          background-color: rgba(245, 245, 245, 1);
+          background-clip: content-box;
+          height: 26px;
+      
+          .price-label-text,
+          .price-label-text-right {
+            color: rgba(180, 180, 180, 1);
+            font-size: 11px;
+          }
+        }
+        .price-label {
+          border-right: 1px solid rgba(245, 245, 245, 1);
+        }
+        .price-label-right {
+          border-left: 1px solid rgba(245, 245, 245, 1);
+        }
+      }
+}
+
+.investment-modal{
+    .modal__button-text{
+        text-align: left;
+    }
+}
+// End css B412
+
+// C610
+.investment-order{
+    .order__data-buttons li:last-child {
+        margin-left: 1rem;
+    }
+    .order__data-buttons li{
+        max-width: 13rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-top: 0.7rem;
+        height: 2.2rem;
+        line-height: 2.2rem;
+        padding: 0;
+        letter-spacing: 0.02em;
+        cursor: pointer;
+    }
+    .counter.order__data-counter input:focus{
+        outline-width: 0;
+    }
+    .counter.order__data-counter input{
+        padding: 2px 5px;
+        text-align: center;
+        background: white;
+        width: 100%;
+    }
+    .counter__button{
+        cursor: pointer;
+    }
+    .counter.order__data-counter .button__disabled {
+        background-color: #ededed;
+        color: #cbcbcb;
+        cursor: not-allowed;
+    }
+    .modal__link{
+        margin-top: 1rem;
+    }
+    .modal__link a p{
+        color: #57a5f0;
+    }
+    .button__warning{
+        background: #ff5c81;
+        color: white;
+    }
+    .caution_note{
+        cursor: pointer;
+    }
+    .button{
+        cursor: pointer;
+    }
+    .btn_close{
+      background-color: unset;
+      color: #43deb1;
+    }
+    .btn_close:hover{
+      background-color: #43deb1;
+      color: #ffffff;
+    }
+    .counter__number{
+        max-width: 11.6rem;
+    }
+    @media only screen and (max-width: 768px) {
+        .order__data-buttons li:last-child {
+            margin-left: 0rem;
+        }
+    }
+
+}
+.order{
+    button, a {
+		cursor: pointer;
+	}
+}
+
+// END C610 C611
+
+// C710 C711
+
+.sell-investment{
+    .red-title{
+		color: red;
+	}
+	button, a {
+		cursor: pointer;
+	}
+	.button__square__disabled{
+		cursor: not-allowed;
+	}
+	button.counter__button.num-btn-disable {
+		background-color: #ededed;
+		color: #cbcbcb;
+		cursor: not-allowed;
+	}
+	.order__modal .button__square__disabled{
+		cursor: not-allowed;
+		background-color: #ededed;
+		color: #cbcbcb;
+	}
+	.button__warning{
+		background: #ff5c81;
+		color: white;
+	}
+	@media only screen and (max-width: 768px) {
+
+	}
+}
+
+.modal_pdf{
+  .button_read {
+    background-color: #8c8f8e;
+    border: solid 1px #8c8f8e;
+    color: #ffffff;
+  }
+  .icon_pdf {
+    width: 20px;
+    cursor: pointer
+  }
+}

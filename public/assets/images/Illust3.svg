@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="117px" height="91px" viewBox="0 0 117 91" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Illust3</title>
+    <g id="Design-Comprehensive-Layout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0-4-6口座開設4-取引動機選択" transform="translate(-225.000000, -902.000000)">
+            <g id="contents" transform="translate(16.000000, 176.000000)">
+                <g id="block-/-current" transform="translate(0.000000, 505.000000)">
+                    <g id="block" transform="translate(16.000000, 16.000000)">
+                        <g id="wrap" transform="translate(0.000000, 36.000000)">
+                            <g id="Illust3" transform="translate(193.000000, 169.000000)">
+                                <g id="Group-18" transform="translate(70.533029, 45.470261) rotate(48.000000) translate(-70.533029, -45.470261) translate(47.033029, 4.970261)" stroke="#222222" stroke-width="1.05000007">
+                                    <path d="M17.4965228,62.3542411 C15.1394835,70.2213366 17.1239765,76.2651213 23.4500016,80.4855953 C32.167441,75.3817618 31.2370867,66.0801195 29.7035788,62.3542411 C25.7508466,62.2819253 21.6818279,62.2819253 17.4965228,62.3542411 Z" id="Path-4" fill="#FFFFFF"></path>
+                                    <path d="M20.7741951,62.333036 C19.6096113,67.1243271 20.5901246,70.8051686 23.715735,73.3755606 C28.0229135,70.2671768 27.5632371,64.6022049 26.8055498,62.333036 C24.8525539,62.2889936 22.8421024,62.2889936 20.7741951,62.333036 Z" id="Path-4-Copy" fill="#43DEB1"></path>
+                                    <g id="Group-17" transform="translate(0.000000, 0.000000)">
+                                        <g id="Group-9">
+                                            <path d="M23.0679835,0.524628569 L33.7027918,15.8389938 C34.2035658,16.6656494 34.4215172,17.2581133 34.4661581,17.8954568 L34.4661581,17.8954568 L34.474879,55.0044885 L11.7250008,55.0044885 L11.7250008,18.1613431 C11.7632628,17.3323337 11.9624875,16.7244556 12.2954272,16.2069583 L12.2954272,16.2069583 L22.9557064,0.597659902 C22.9830486,0.557813898 23.0239531,0.532822713 23.0679835,0.524628569 L23.0679835,0.524628569 Z" id="Combined-Shape" fill="#43DEB1"></path>
+                                            <path d="M12.0750008,38.6103197 L12.0750008,55.6967108 L2.57993423,55.6967108 C2.33830964,55.6967108 2.11955963,55.5987731 1.96121576,55.4404292 C1.80287189,55.2820853 1.70493417,55.0633353 1.70493417,54.8217107 L1.70493417,54.8217107 L12.0750008,38.6103197 Z" id="Triangle" fill="#43DEB1"></path>
+                                            <path d="M45.6750031,38.6414697 L45.6750031,55.7278608 L36.1799365,55.7278608 C35.9383119,55.7278608 35.7195619,55.6299231 35.561218,55.4715792 C35.4028742,55.3132353 35.3049365,55.0944853 35.3049365,54.8528607 L35.3049365,54.8528607 L45.6750031,38.6414697 Z" id="Triangle-Copy" fill="#43DEB1" transform="translate(39.900003, 46.561749) scale(-1, 1) translate(-39.900003, -46.561749) "></path>
+                                            <rect id="Rectangle" fill="#FFFFFF" x="11.7250008" y="18.674486" width="22.7500015" height="37.0222247"></rect>
+                                            <ellipse id="Oval" fill="#43DEB1" cx="23.1000016" cy="29.2250423" rx="5.07500035" ry="5.01277812"></ellipse>
+                                        </g>
+                                        <path d="M29.0450392,56.0544886 L32.0425674,61.9267112 L14.8278405,61.9267112 L17.595584,56.0544886 L29.0450392,56.0544886 Z" id="Rectangle" fill="#43DEB1"></path>
+                                    </g>
+                                </g>
+                                <g id="Group-3" transform="translate(0.000000, 19.000000)">
+                                    <ellipse id="Oval" stroke="#222222" fill="#FFFFFF" cx="15" cy="8" rx="14.5" ry="2.5"></ellipse>
+                                    <circle id="Oval" fill="#43DEB1" cx="15" cy="8" r="8"></circle>
+                                    <circle id="Oval-Copy-3" fill="#43DEB1" cx="33" cy="24" r="3"></circle>
+                                    <circle id="Oval-Copy-4" stroke="#222222" fill="#FFFFFF" cx="14" cy="37" r="1.5"></circle>
+                                    <circle id="Oval-Copy-5" stroke="#222222" fill="#FFFFFF" cx="108" cy="19" r="1.5"></circle>
+                                    <path d="M6.53230231,10.0312496 C11.8626087,10.8797092 17.3518413,10.8797092 23,10.0312496" id="Path-6" stroke="#222222"></path>
+                                </g>
+                                <line x1="42.7745098" y1="55.2222222" x2="20.2254902" y2="70.7777778" id="Line-Copy" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"></line>
+                                <line x1="44.7745098" y1="68.2222222" x2="22.2254902" y2="83.7777778" id="Line-Copy-2" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"></line>
+                                <line x1="58.7745098" y1="71.2222222" x2="36.2254902" y2="86.7777778" id="Line-Copy-3" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"></line>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

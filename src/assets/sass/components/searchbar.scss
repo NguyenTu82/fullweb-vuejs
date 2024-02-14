@@ -1,0 +1,126 @@
+@use '../foundation/variables' as variable;
+@use '../foundation/mixin' as mixin;
+
+.searchbar {
+  &__top {
+    display: flex;
+    align-items: center;
+    p {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-left: 0.5rem;
+      @include mixin.sp {
+        font-size: 1.4rem;
+      }
+    }
+    &-right {
+      display: flex;
+      gap: 2rem;
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      @include mixin.sp {
+        align-items: flex-start;
+      }
+      gap: 1rem;
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+        color: variable.$header_sub_color;
+      }
+    }
+    &-button {
+      width: 80px;
+      height: 20px;
+      font-size: 1rem;
+      margin-top: 0;
+      margin-left: 2rem;
+      &--reset {
+        width: 80px;
+        height: 20px;
+        font-size: 1rem;
+        margin-top: 0;
+        margin-left: 0.5rem;
+      }
+    }
+    &-category {
+      display: flex;
+      align-items: flex-end;
+      margin-top: 1.5rem;
+      gap: 1rem;
+      input {
+        border: solid 1px variable.$text_color;
+        padding: 0.5rem;
+        width: 24rem;
+      }
+    }
+    &-caution {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 1.5rem;
+      @include mixin.sp {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      a {
+        font-size: 1.4rem;
+        color: variable.$text_color_primary;
+      }
+      img {
+        width: 14px;
+      }
+      p {
+        font-size: 1rem;
+        color: variable.$header_sub_color;
+        font-weight: 400;
+      }
+    }
+    &--between {
+      justify-content: space-between;
+      @include mixin.sp {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    margin-top: 2.7rem;
+    @include mixin.sp {
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+    &-flex {
+      display: flex;
+      margin-left: 1rem;
+      &:first-child {
+        margin-left: 0;
+      }
+      @include mixin.sp {
+        margin-left: 0;
+      }
+    }
+    &-button {
+      display: flex;
+      font-size: 1.2rem;
+      letter-spacing: 0.1em;
+      border-bottom: solid 1px variable.$base_color;
+      padding: 0.5em;
+      margin-left: 1rem;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    &-requirement {
+      color: variable.$header_sub_color;
+    }
+    &-value {
+      margin-left: 1rem;
+    }
+  }
+}
